@@ -1,47 +1,62 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
+
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <limits.h>
 #include <stdio.h>
+
 /**
- * struct vtype - struct vtype
- * @tp: tp
- * @f: function
+ *struct print - structure for different types of cases
+ * struct print - is the struct for printer functions
+ * @f: is the pointer to a printer functions
+ * @oper: is the identifier
  *
+ * Description: struct stores pointers to the
+ * printer functions.
  */
-typedef struct vtype
-{
-	char tp;
-	void (*f)();
-} vtype_t;
+typedef struct print
+{  
+char *nubs; 
+int (*f)(va_list y);  
+} print_t;
+
+/* General Prototypes */
+
+int main(void)
 int _printf(const char *format, ...);
-void print_char(va_list valist);
-void print_int(va_list valist);
-void print_float(va_list valist);
-void print_string(va_list valist);
-void _write_buffer(char *buffer, int *index);
+int print_func(int *i, const char *format, va_list arguments);
+
+/* Putchar */
+
+int _putchar(char c);
+
+/* Main Prototypes*/
+
+int nubs_char(va_list y);
+int nubs_string(va_list y);
+int nubs_percent(va_list y);
+int nubs_numbers(va_list arg);
+
+/* Advanced Prototypes*/
+
+int nubs_unsigned(va_list arg);
+int nubs_binary(va_list y);
+int nubs_octal(va_list y);
+int rot13(va_list y);
+int print_rev(va_list y);
+int printnumber(int n);
+int print_hex_lower(va_list arg);
+int print_hex_upper(va_list arg);
 int _strlen(char *s);
-char *_memcpy(char *dest, char *src, unsigned int n);
-void format_s(va_list valist, char *buffer, int *index);
-void format_c(va_list valist, char *buffer, int *index);
-void format_d(va_list valist, char *buffer, int *index);
-char *itos(char str[], long int num);
-char *utos(char str[], int num);
-int num_len(int num);
-int float_len(double f);
-void format_i(va_list valist, char *buffer, int *index);
-void format_u(va_list valist, char *buffer, int *index);
-void format_perc(va_list valist, char *buffer, int *index);
-void format_p(va_list valist, char *buffer, int *index);
-void format_lx(va_list valist, char *buffer, int *index);
-char *tostring(char str[], int num);
-int num_len(int num);
-void reset_buffer(char buffer[]);
-void *rot13(char *s);
-void rev_string(char *s);
-void format_h(va_list valist, char *buffer, int *index);
-void format_ch(va_list valist, char *buffer, int *index);
-void format_o(va_list valist, char *buffer, int *index);
-void format_b(va_list valist, char *buffer, int *index);
-void format_r(va_list valist, char *buffer, int *index);
-void format_R(va_list valist, char *buffer, int *index);
-#endif /* HOLBERTON_H */
+
+/* print string without va_list */
+
+void _puts(char *s);
+char *convert_num_to_base(char range[], unsigned int num, int base);
+int print_S(va_list list);
+unsigned int handl_buf(char *buf, char c, unsigned int ibuf);
+int print_buf(char *buf, unsigned int nbuf);
+
+#endif
