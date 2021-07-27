@@ -8,7 +8,7 @@
  *
  * Return: 0.
  */
-int nubs_unsigned(va_list arg)
+int nubs_unsigned(va_list arg);
 {
 unsigned int i, y, r;
 unsigned int n = va_arg(arg, int), count = 0;

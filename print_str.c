@@ -9,7 +9,7 @@
  * Return: The string length.
  */
 
-int nubs_string(va_list y)
+int nubs_string(va_list y);
 {
 char *str;
 int i;

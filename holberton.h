@@ -24,7 +24,7 @@ int (*f)(va_list y);
 
 /* General Prototypes */
 
-int main(void)
+int main(void);
 int _printf(const char *format, ...);
 int print_func(int *i, const char *format, va_list arguments);
 

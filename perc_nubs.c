@@ -9,7 +9,7 @@
  * Return: 1.
  */
 
-int nubs_percent(va_list y)
+int nubs_percent(va_list y);
 {
 (void)y;
 _putchar('%');
