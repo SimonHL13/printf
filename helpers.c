@@ -7,13 +7,13 @@
  */
 int _strlen(char *s)
 {
-  int len = 0;
+int len = 0;
 
-  while (*s++)
-    {
-      len++;
-    }
-  return (len);
+while (*s++)
+{
+len++;
+}
+return (len);
 }
 
 /**
@@ -24,12 +24,12 @@ int _strlen(char *s)
  */
 void _puts(char *s)
 {
-  int i;
+int i;
 
-  for (i = 0; i < _strlen(s); i++)
-    {
-      _putchar(s[i]);
-    }
+for (i = 0; i < _strlen(s); i++)
+{
+_putchar(s[i]);
+}
 }
 
 /**
@@ -41,17 +41,17 @@ void _puts(char *s)
  */
 char *convert_num_to_base(char range[], unsigned int num, int base)
 {
-  char *ptr;
-  static char buffer[128];
-  int mod = 0;
+char *ptr;
+static char buffer[128];
+int mod = 0;
 
-  ptr = &buffer[127];
-  *ptr = '\0';
+ptr = &buffer[127];
+*ptr = '\0';
 
-  do {
-    mod = num % base;
-    *--ptr = range[mod];
-    num /= base;
-  } while (num != 0);
-  return (ptr);
+do {
+mod = num % base;
+*--ptr = range[mod];
+num /= base;
+} while (num != 0);
+return (ptr);
 }

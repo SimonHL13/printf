@@ -7,15 +7,15 @@
  */
 int print_hex_lower(va_list arg)
 {
-  unsigned int i = 0, count = 0;
-  char *s;
-  char range[17] = "0123456789abcdef";
+unsigned int i = 0, count = 0;
+char *s;
+char range[17] = "0123456789abcdef";
 
-  i = va_arg(arg, unsigned int);
-  s = convert_num_to_base(range, i, 16);
-  _puts(s);
-  count = _strlen(s);
-  return (count);
+i = va_arg(arg, unsigned int);
+s = convert_num_to_base(range, i, 16);
+_puts(s);
+count = _strlen(s);
+return (count);
 }
 
 
@@ -26,13 +26,13 @@ int print_hex_lower(va_list arg)
  */
 int print_hex_upper(va_list arg)
 {
-  unsigned int i = 0, count = 0;
-  char *s;
-  char range[17] = "0123456789ABCDEF";
+unsigned int i = 0, count = 0;
+char *s;
+char range[17] = "0123456789ABCDEF";
 
-  i = va_arg(arg, unsigned int);
-  s = convert_num_to_base(range, i, 16);
-  _puts(s);
-  count = _strlen(s);
-  return (count);
+i = va_arg(arg, unsigned int);
+s = convert_num_to_base(range, i, 16);
+_puts(s);
+count = _strlen(s);
+return (count);
 }

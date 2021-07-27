@@ -11,6 +11,6 @@
 
 int nubs_char(va_list y)
 {
-  _putchar(va_arg(y, int));
-  return (1);
+_putchar(va_arg(y, int));
+return (1);
 }

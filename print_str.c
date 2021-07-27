@@ -11,14 +11,14 @@
 
 int nubs_string(va_list y)
 {
-  char *str;
-  int i;
+char *str;
+int i;
 
-  str = (va_arg(y, char*));
-  if (str == NULL)
-    str = "(null)";
-  for (i = 0; str[i]; i++)
-    _putchar(str[i]);
+str = (va_arg(y, char*));
+if (str == NULL)
+str = "(null)";
+for (i = 0; str[i]; i++)
+_putchar(str[i]);
 
-  return (i);
+return (i);
 }
