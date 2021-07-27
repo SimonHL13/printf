@@ -1,34 +1,40 @@
 #include "holberton.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * oper_binary - main function
- * @y: The argument pointer.
- *
- * Description: This function prints a binary number.
- *
- * Return: The total number of characters.
+ * format_b - function to convert to unsigned integer to binary
+ * @valist: taking in arguments
+ * @buffer: values stored
+ * @index: tracks the index position
  */
+void format_b(va_list valist, char *buffer, int *index)
+{
+	unsigned int n;
+	int i;
+	char *binaryvalues;
+	char *binary;
 
-int nubs_binary(va_list y)
-{
-unsigned int bin = va_arg(y, int), buff[1000];
-int  count = 0, i;
-
-if (bin == 0)
-{
-_putchar('0');
-return (1);
-}
-
-while (bin > 0)
-{
-buff[count] = bin % 2;
-bin /= 2;
-count++;
-}
-for (i = count - 1; i >= 0; i--)
-{
-_putchar(buff[i] + '0');
-}
-return (count);
+	n = va_arg(valist, int);
+	binaryvalues = "01";
+	binary = malloc(33 * sizeof(char));
+	if (binary == NULL)
+		return;
+	if (n == 0)
+	{
+		buffer[*index] = '0';
+		*index += 1;
+	}
+	else
+	{
+		for (i = 0; n != 0; i++)
+		{
+			binary[i] = binaryvalues[n % 2];
+			n /= 2;
+		}
+		for (i--; i >= 0; *index += 1, i--)
+		{
+			buffer[*index] = binary[i];
+		}
+	}
+	free(binary);
 }
