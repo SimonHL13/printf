@@ -13,7 +13,7 @@
  * Return: The total number of characters of the functions called.
  */
 
-int print_func(int *i, const char *format, va_list arguments);
+int print_func(int *i, const char *format, va_list arguments)
 {
 int count = 0;
 int k = *i, l = 0;

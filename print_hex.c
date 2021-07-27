@@ -5,7 +5,7 @@
  * @arg: va_list parameter
  * Return: Number of printed characters
  */
-int print_hex_lower(va_list arg);
+int print_hex_lower(va_list arg)
 {
 unsigned int i = 0, count = 0;
 char *s;
@@ -24,7 +24,7 @@ return (count);
  * @arg: va_list parameter
  * Return: Number of printed characters
  */
-int print_hex_upper(va_list arg);
+int print_hex_upper(va_list arg)
 {
 unsigned int i = 0, count = 0;
 char *s;

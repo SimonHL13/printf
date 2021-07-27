@@ -9,7 +9,7 @@
  * Return: The total number of characters.
  */
 
-int nubs_binary(va_list y);
+int nubs_binary(va_list y)
 {
 unsigned int bin = va_arg(y, int), buff[1000];
 int  count = 0, i;

@@ -6,7 +6,7 @@
  * Return: 1
  */
 
-int printnumber(int n);
+int printnumber(int n)
 {
 int count = 0;
 unsigned int num;
@@ -52,7 +52,7 @@ return (count);
  * Return: 0.
  */
 
-int nubs_numbers(va_list arg);
+int nubs_numbers(va_list arg)
 {
 int output;
 int count;

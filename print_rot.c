@@ -8,7 +8,7 @@
  *
  * Return: The total number of characters.
  */
-int rot13(va_list y);
+int rot13(va_list y)
 {
 char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";

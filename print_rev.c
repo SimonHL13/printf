@@ -8,7 +8,7 @@
  *
  * Return: The total number of characters.
  */
-int print_rev(va_list y);
+int print_rev(va_list y)
 {
 int i = 0, count = 0;
 char *s = va_arg(y, char*);

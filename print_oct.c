@@ -9,7 +9,7 @@
  * Return: The total number of chacarters.
  */
 
-int nubs_octal(va_list y);
+int nubs_octal(va_list y)
 {
 unsigned int oct = va_arg(y, int), buff[1000];
 int  count = 0, i;
